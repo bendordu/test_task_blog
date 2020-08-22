@@ -3,4 +3,5 @@ django-admin==2.0.1
 django-uuslug==1.2.0
 psycopg2==2.7.4
 gunicorn==19.9.0
+six
 django_heroku
