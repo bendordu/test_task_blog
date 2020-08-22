@@ -29,7 +29,7 @@
             <span class="blog_posts_grid_post_date">{{ post.pub_date|date:"d E Y H:i" }}</span>
             <div class="blog_posts_grid_post_img">
                 {% if post.image %}
-                {% if last_post.id == 10 %}
+                {% if post.id == 10 %}
                 <img src="https://sun9-37.userapi.com/rtParv9gSdxD159PPI6pcIBoAbT7xTwmKWOFNg/w8J4tAVlSvk.jpg">
                 {% else %}
                 <img src="{{ post.image.url }}">
