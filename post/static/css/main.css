@@ -1,0 +1,401 @@
+@font-face {
+    font-family: Circe Rounded;
+    src: url('/static/ttf/CirceRounded-Regular.ttf') format("truetype");  
+}
+@font-face {
+    font-family: Museo Cyrl;
+    src: url('/static/ttf/Museo Cyrl 500.otf') format("truetype");  
+}
+header {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #CDCDCD;
+}
+a {
+    text-decoration: none;
+}
+.header_add_post_btn {
+    display: flex;
+    flex-direction: row;
+    padding: 6px 16px;
+    width: 166px;
+    height: 32px;
+    margin-right: 120px;
+    background: #315AF2;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+.header_add_post_btn:hover {
+    background: rgba(49, 90, 242, 0.75);
+    cursor: pointer;
+}
+.header_add_post_btn span {
+    font-family: Circe Rounded;
+    font-size: 16px;
+    line-height: 19px;
+    align-self: center;
+    margin: 10px 0px;
+    color: #FFFF;
+}
+.header_logo {
+    display: flex;
+    width: 129px;
+    height: 26px;
+    justify-items: end;
+    margin-left: 120px;
+    background: url('/static/img/Logo_Kodland.png') no-repeat;
+    background-size: 100%;
+}
+.header_blog {
+    display: inline-flex;
+    margin-left: 20px;
+    font-family: Circe Rounded;
+    font-size: 22px;
+    font-weight: bold;
+    color: #010101;
+    align-items: flex-end;
+    margin-top: 3px;
+}
+.header_blog a:hover {
+    color: #6a6a6a;
+}
+.header_blog a {
+    color: black;
+}
+.header_menu {
+    display: flex;
+}
+.blog_new_new {
+    font-family: Circe Rounded;
+    font-size: 16px;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    letter-spacing: -0.416667px;
+    color: #E9399C;
+    font-weight: 600;
+}
+.blog_new {
+    display: flex;
+    flex-direction: column;
+    padding-left: 120px;
+}
+.blog_new_title {
+    display: flex;
+    width: 672px;
+    font-family: Museo Cyrl;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+.blog_new_body {
+    font-family: Circe Rounded;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    width: 391px;
+    align-items: center;
+    letter-spacing: -0.416667px;
+    margin: 0px;
+}
+.blog_new_btn {
+    background: #315AF2;
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    padding: 10px 18px;
+    font-family: Museo Cyrl;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.416667px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    outline: none;
+}
+.blog_new_btn:hover {
+    background: rgba(49, 90, 242, 0.75);
+    cursor: pointer;
+}
+.blog {
+    display: flex;
+    border-bottom: 2px solid #CDCDCD;
+}
+.blog_img {
+    width: 464px;
+    height: 416px;
+}
+.blog_img img {
+    max-width: 464px;
+    max-height: 416px;
+}
+.blog_posts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 119px;
+    margin-right: 120px;
+}
+.blog_posts_another {
+    font-family: Museo Cyrl;
+    font-weight: bold;
+    font-size: 32px;
+    display: inline-flex;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+    margin-top: 60px;
+    margin-bottom: 32px;
+}
+.blog_posts_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 32px;
+    grid-column-gap: 98px;
+}
+.blog_posts_grid_post {
+    width: 331px;
+    height: 296px;
+    border: 2px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+}
+.blog_posts_grid_post_date {
+    font-family: Circe Rounded;
+    font-size: 12px;
+    display: inline-flex;
+    letter-spacing: -0.416667px;
+    color: #979797;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.blog_posts_grid_post_title {
+    font-family: Circe Rounded;
+    font-size: 24px;
+    font-weight: 900;
+    display: block;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+    margin-left: 43px;
+    margin-right: 44px;
+}
+.blog_posts_grid_post_img {
+    width: 217px;
+    height: 112px;
+    display: inline-flex;
+    align-self: center;
+    justify-content: center;
+}
+.blog_posts_grid_post_img img {
+    max-width: 217px;
+    max-height: 112px;
+}
+html, body {
+    height: 100%;
+}
+.post {
+    background-color: #E5E5E5;
+    height: 100%;
+}
+.post_ {
+    display: flex;
+    flex-direction: column;
+    margin-left: 417px;
+    margin-right: 411px;
+}
+.post_title {
+    width: 400px;
+    font-family: Museo Cyrl;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+}
+.post_img {
+    width: 607px;
+    height: 320px;
+}
+.post_img img {
+    object-fit: cover;
+    object-position: center 30%;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+.post_body {
+    font-family: Circe Rounded;
+    color: #404040;
+    font-size: 24px;
+}
+.add {
+    margin: 59px 0px 0px 120px;
+}
+.add_post {
+    font-family: Museo Cyrl;
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+}
+.form_add {
+    display: flex;
+    flex-direction: column;
+}
+#id_title {
+    margin-top: 44px;
+    width: 847px;
+    height: 42px;
+    border: 2px solid #CDCDCD;
+    border-radius: 3px;
+    outline: none;
+    color: #315AF2;
+    font-family: Circe Rounded;
+    font-size: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.form_add_input_submit {
+    width: 159px;
+    height: 50px;
+    background: #E9399C;
+    border-radius: 3px;
+    border: none;
+    font-family: Museo Cyrl;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-left: 13px;
+    cursor: pointer;
+    outline: none;
+}
+.form_add_input_submit:hover {
+    background: #e26aae;
+}
+#id_title::placeholder {
+    font-family: Circe Rounded;
+    font-size: 24px;
+    letter-spacing: -0.416667px;
+    color: #C4C4C4;
+}
+#id_title:-ms-input-placeholder {
+    font-family: Circe Rounded;
+    font-size: 24px;
+    letter-spacing: -0.416667px;
+    color: #C4C4C4;
+}
+#id_title::-ms-input-placeholder {
+    font-family: Circe Rounded;
+    font-size: 24px;
+    letter-spacing: -0.416667px;
+    color: #C4C4C4;
+}
+#id_title::-webkit-input-placeholder {
+    font-family: Circe Rounded;
+    font-size: 24px;
+    letter-spacing: -0.416667px;
+    color: #C4C4C4;
+}
+#id_title:-moz-placeholder {
+    font-family: Circe Rounded;
+    font-size: 24px;
+    letter-spacing: -0.416667px;
+    color: #C4C4C4;
+}
+#id_title::-moz-placeholder {
+    font-family: Circe Rounded;
+    font-size: 24px;
+    letter-spacing: -0.416667px;
+    color: #C4C4C4;
+}
+#id_body {
+    margin-top: 37px;
+    width: 881px;
+    height: 478px;
+    border: 2px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    resize: none;
+    outline: none;
+    font-family: Circe Rounded;
+    font-size: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.down {
+    display: flex;
+    flex-direction: row;
+}
+.form_add_image {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    width: 298px;
+    border: 2px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: 17px;
+    margin-top: 35px;
+    text-align: center;
+    align-items: center;
+}
+.form_add_image_sub {
+    font-family: Circe Rounded;
+    font-size: 24px;
+    font-weight: 600;
+    color: #315AF2;
+    margin: 17px 0px 11px 0px;
+}
+.form_add_image_btn {
+    display: inline-flex;
+    width: 155px;
+    height: 50px;
+    background: #315AF2;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-family: Museo Cyrl;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-top: 11px;
+    margin-bottom: 10px;
+}
+.form_add_image_btn:hover {
+    background: rgba(49, 90, 242, 0.75);
+}
+.form_add_image input[type=file] {
+    outline: 0;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none
+}
+#prev {
+    max-width: 286px;
+    max-height: 260px;
+    border: 2px solid #E5E5E5;
+    box-sizing: border-box;
+    position: relative;
+}
+#prev svg {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    cursor: pointer;
+}
+#prev img {
+    max-width: 282px;
+    max-height: 256px;
+}

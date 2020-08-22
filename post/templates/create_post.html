@@ -1,0 +1,62 @@
+{% extends "main.html" %}
+{% load static %}
+{% block title %}New post{% endblock %}
+{% block content %} 
+<div class="add">
+    <span class="add_post">Добавить статью</span>
+    <form class="form_add" action="." method="post" enctype="multipart/form-data">
+        <div>
+            <label hidden for="id_title">Title:</label>
+            <input type="text" name="title" maxlength="250" required="" id="id_title" placeholder="Введите название статьи">
+            <input class="form_add_input_submit" type="submit" value="Опубликовать"> 
+        </div>
+        <div class="down">
+            <label hidden for="id_body">Body:</label>
+            <textarea name="body" cols="40" rows="10" required="" id="id_body"></textarea>
+            <div class="form_add_image">
+                <span class="form_add_image_sub">Загрузить изображение</span>
+                <div id="prev" hidden>
+                    <svg id="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#E5E5E5"/>
+                        <line x1="16.9498" y1="7.05025" x2="7.05029" y2="16.9497" stroke="white" stroke-width="2"/>
+                        <line x1="16.9496" y1="16.9497" x2="7.05014" y2="7.05023" stroke="white" stroke-width="2"/>
+                    </svg>   
+                </div>
+                <div id="preview">
+                    <label class="form_add_image_btn" for="id_image"><span>Файл</span></label>
+                    <input type="file" name="image" accept="image/*" id="id_image"> 
+                </div>
+            </div>
+        </div>
+        {% csrf_token %}
+    </form>
+</div>
+
+<script>
+    function showFile(e) {
+    var f = e.target.files[0];
+    var fr = new FileReader();
+    fr.onload = (function(theFile) {
+        return function(e) {
+          var div = document.createElement('div');
+          div.innerHTML = "<img src='" + e.target.result + "' />";
+          div.setAttribute("id", "image");
+          document.getElementById('prev').insertBefore(div, null);
+          document.getElementById('prev').hidden=false;
+          document.getElementById('preview').hidden=true;
+        };
+      })(f);
+ 
+      fr.readAsDataURL(f);
+    }
+
+    document.getElementById('id_image').addEventListener('change', showFile, false);
+
+    document.getElementById('close').onclick = function(){
+        document.getElementById('image').innerHTML = "";
+        document.getElementById('prev').hidden=true;
+        document.getElementById('preview').hidden=false;
+    }
+
+</script>
+{% endblock %}

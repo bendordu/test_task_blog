@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Blog{% endblock %}</title>
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header_menu">
+        <div class="header_logo">
+        </div>
+        <div class="header_blog">
+            <a href="{% url "post:blog" %}">Блог</a>
+        </div>
+    </div>
+    <a href="{% url "post:create_post" %}"><button class="header_add_post_btn"><span>+ Добавить статью</span></button></a>
+</header>
+    {% block content %} 
+    {% endblock %}
+</body>
+</html>

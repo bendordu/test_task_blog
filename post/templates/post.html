@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% load static %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %} 
+<div class="post">
+    <div class="post_">
+        <p class="post_title">{{ post.title }}</p>
+        {% if post.image %}
+        <div class="post_img">
+            <img src="{{ post.image.url }}">
+        </div>
+        {% endif %}
+        <p class="post_body">{{ post.body }}</p>
+    </div>
+</div>
+
+{% endblock %}
