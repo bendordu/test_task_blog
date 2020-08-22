@@ -28,4 +28,5 @@ def create_post(request):
     
 def del(request, id):
     post = Post.objects.get(id=id)
+    post.delete()
     return redirect('post:blog')
