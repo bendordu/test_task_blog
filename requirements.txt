@@ -1,0 +1,5 @@
+Django==3.0.5
+django-admin==2.0.1
+django-uuslug==1.2.0
+psycopg2==2.7.4
+django_heroku
