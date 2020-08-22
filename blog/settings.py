@@ -18,6 +18,19 @@ DATABASE_URL = os.environ['DATABASE_URL']
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 import dj_database_url
+
+DATABASES = {  
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'blog',                      # Or path to database file if using sqlite3.
+        'USER': 'postgres',                      # Not used with sqlite3.
+        'PASSWORD': '1234',                  # Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
+
+
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -82,16 +95,6 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {  
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-#         'NAME': 'blog',                      # Or path to database file if using sqlite3.
-#         'USER': 'postgres',                      # Not used with sqlite3.
-#         'PASSWORD': '1234',                  # Not used with sqlite3.
-#         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
-#         'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
-#     }
-# }
 
 
 # Password validation
