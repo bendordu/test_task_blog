@@ -37,7 +37,6 @@
                 {% endif %}
             </div>
             <a class="blog_posts_grid_post_title" href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
-            <a class="" href="{% url "post:del" post.id %}">del</a>
         </div> 
         {% endfor %} 
     </div>

@@ -26,7 +26,3 @@ def create_post(request):
         form = PostCreateForm
     return render(request, 'create_post.html', {'form': form})
     
-def del(request, id):
-    post = Post.objects.get(id=id)
-    post.delete()
-    return redirect('post:blog')
