@@ -13,7 +13,7 @@
     </div>
     <div class="blog_img"> 
         {% if last_post.image %}
-        <img src="{{ last_post.image.url }}">
+        <img src="https://sun9-45.userapi.com/h_RMqtUw6lnPuOTkXu02ZE4MOiQnhiB0O3vKDw/Zktw7_EvQfY.jpg">
         {% else %}
         <img src="{% static "img/no_image.png" %}">
         {% endif %}
@@ -28,6 +28,8 @@
             <div class="blog_posts_grid_post_img">
                 {% if post.image %}
                 <img src="{{ post.image.url }}">
+                {% else %}
+                <img src='https://sun9-37.userapi.com/rtParv9gSdxD159PPI6pcIBoAbT7xTwmKWOFNg/w8J4tAVlSvk.jpg'>
                 {% endif %}
             </div>
             <a class="blog_posts_grid_post_title" href="{{ post.get_absolute_url }}"><p>{{ post.title }}</p></a>
